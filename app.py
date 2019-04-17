@@ -16,17 +16,24 @@ def home():
     return render_template("index.html", mars_data = db_data)
 
 
-@app.route("/scrape")
-def scrape():
-
-    # Run the scrape function
-    data = scrape.runScrape()
+@app.route("/scraped")
+def scraped():
 
     #drops collection for duplicates
     mongo.db.mars_data.drop()
 
-    # Insert the Mongo database 
-    mongo.db.mars_data.insert(data)
+    # Run the scrape function
+
+    all_mars_data = {
+    "mars_news26_title": scrape.scrape_mars_nasa(),
+    "mars_jpl_data": scrape.scrape_mars_jpl(),
+    "mars_weather_data": scrape.scrape_mars_weather(),
+    "hemisphere_image_urls": scrape.get_hemisphere_img(),
+    "mars_html": scrape.get_mars_html()
+    }
+
+    #Insert the Mongo database 
+    mongo.db.mars_data.insert(all_mars_data)
 
     # Redirect back to home page
     return redirect("/")
