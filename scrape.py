@@ -31,7 +31,7 @@ def scrape_mars_nasa():
     news_p = soup.findAll("div", {"class": "article_teaser_body"})[0].text
 
     # Store data in a dictionary
-    mars_news25_title = {
+    mars_news_title ={
         "news_title": news_title,
         "news_p": news_p
     }
@@ -40,7 +40,7 @@ def scrape_mars_nasa():
     browser.quit()
 
     # Return results
-    return mars_news25_title
+    return mars_news_title
 
 def scrape_mars_jpl():
     browser = init_browser()
@@ -128,7 +128,7 @@ def get_hemisphere_img():
         
         hemisphere_dict ={
             "title":hemisphere_title,
-            "img url": base_url + hemisphere_image_urls
+            "img_url": base_url + hemisphere_image_urls
         }
 
         # Store data in a dictionary
