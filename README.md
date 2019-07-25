@@ -1,9 +1,9 @@
 # nasaScrape :rocket:
 
 A Flask Application using: 
-• PyMongo(for storing data)
-• Beautiful Soup(for scraping data)
-• Splinter(for headless browser)
+*PyMongo(for storing data)
+*Beautiful Soup(for scraping data)
+*Splinter(for headless browser)
 
 The purpose of this application is to scrape the most recent information about Mars from various sites and displaying it in an easy to read and unified interface. It's for all you Mars nerds out there! 
 
