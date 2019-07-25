@@ -5,6 +5,11 @@ A Flask Application using:
 *Beautiful Soup(for scraping data)
 *Splinter(for headless browser)
 
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b
+
 The purpose of this application is to scrape the most recent information about Mars from various sites and displaying it in an easy to read and unified interface. It's for all you Mars nerds out there! 
 
 Want to run the app?? 
